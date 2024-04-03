@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', ()=> {
     const navList = document.getElementById('nav-list');
   
     hamburgerMenu.addEventListener('click', ()=> {
-      navList.style.display = navList.style.display === 'none' ? 'flex' : 'none';
+      navList.style.display = navList.style.display === 'flex' ? 'none' : 'flex';
     });
   });
-  
+  $(document).on('click', '#close', function(){
+      $('#nav-list').css('display', 'none')
+  });
+$(document).on('click', '#close', function(){
+      $('#nav-list').css('display', 'none')
+  });

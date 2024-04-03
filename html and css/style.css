@@ -18,6 +18,7 @@ body {
   filter: grayscale();
   border-radius: 12px;
   max-width: 100%;
+  transition: all 0.2s ease-in;
 }
 .person-f {
   display: flex;
@@ -59,7 +60,6 @@ nav {
 .pages {
   list-style: none;
   display: inline;
-  padding: px;
   font-size: 18px;
 }
 #click {
@@ -94,14 +94,13 @@ nav {
   background-image: url(/images/img1.jpg);
   height: 160px;
   width: 400px;
-  max-width: 600px;
   margin-top: 5%;
   background-position: center;
   transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
-    transform: scale(1.1);
+    transform: scale(1.01);
   }
 }
 .image-2 {
@@ -119,7 +118,6 @@ nav {
   background-image: url(/images/news.jpeg);
   width: 400px;
   height: 206px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -130,7 +128,6 @@ nav {
   background-image: url(/images/news2.jpeg);
   height: 470px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -141,7 +138,6 @@ nav {
   background-image: url(/images/three.png);
   height: 163px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -152,7 +148,6 @@ nav {
   background-image: url(/images/build.jpeg);
   height: 250px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -163,7 +158,6 @@ nav {
   background-image: url(/images/desktop.jpeg);
   height: 220px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -174,7 +168,6 @@ nav {
   background-image: url(/images/baseline.jpeg);
   height: 200px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -185,7 +178,6 @@ nav {
   background-image: url(/images/manuscript.jpeg);
   height: 220px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -196,7 +188,6 @@ nav {
   background-image: url(/images/column.jpeg);
   height: 220px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -207,7 +198,6 @@ nav {
   background-image: url(/images/gutter.jpeg);
   height: 220px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -218,7 +208,6 @@ nav {
   background-image: url(/images/moduler.jpeg);
   height: 220px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -229,7 +218,6 @@ nav {
   background-image: url(/images/everlane.png);
   height: 490px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -240,7 +228,6 @@ nav {
   background-image: url(/images/12column.jpeg);
   height: 220px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -399,6 +386,9 @@ iframe {
   padding-bottom: 20px;
 }
 #nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
 }
 
@@ -410,17 +400,21 @@ iframe {
   display: none;
 }
 @media screen and (max-width: 856px) {
-  .pages {
-    padding: 6px;
-  }
   .icons {
     font-size: 10px;
   }
   #nav-list li a {
-    font-size: 16px;
+    font-size: 17px;
   }
   #click {
-    font-size: 24px;
+    padding: 16px;
+    &:hover {
+      cursor: pointer;
+      background-color: transparent;
+      border-radius: 0px;
+      font-weight: 500;
+      color: #ffcbcb;
+    }
   }
   body {
     overflow-x: hidden;
@@ -434,13 +428,35 @@ iframe {
   hr {
     max-width: 100%;
   }
+  
   #nav-list {
-    display: none; /* Hide the navigation list */
+    display: none; /* Hide the nav list */
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #edecfa;
+    padding-top: 70px;
+    padding-right: 35px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: flex-start;
+    align-items: last baseline;
+  }
+  #nav-list i{
+    bottom: 210px;
+    padding: 10px;
+    position: relative;
+    
   }
 
   #hamburger-menu {
     display: block; /* Show the hamburger menu */
     cursor: pointer;
+  }
+  #hamburger-menu.active ~ #nav-list {
+    display: flex; /* Display the nav list when hamburger menu is active */
   }
 
   /* Style for hamburger icon */
@@ -495,7 +511,8 @@ iframe {
     font-size: 15px;
   }
 
-  .blog-1, #web-p{
+  .blog-1,
+  #web-p {
     font-size: 14px;
   }
 }
@@ -555,7 +572,8 @@ iframe {
     font-size: 17px;
   }
 
-  .blog-1, #web-p{
+  .blog-1,
+  #web-p {
     font-size: 16px;
   }
 }
@@ -589,5 +607,32 @@ iframe {
   }
   #web-p {
     font-size: 12px;
+  }
+}
+@media screen and (max-width: 370px) {
+  nav img {
+    width: 30px;
+  }
+  #click {
+    font-size: 14px;
+  }
+  .person img {
+    width: 20px;
+    height: 20px;
+  }
+  .person #aunt {
+    font-size: 10px;
+  }
+
+  .blog-1 {
+    font-size: 9.5px;
+  }
+  #para1,
+  #para3 {
+    font-size: 11px;
+    padding: 20px;
+  }
+  #web-p {
+    font-size: 10px;
   }
 }
