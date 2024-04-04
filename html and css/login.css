@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  overflow: hidden;
 }
 .d-flex {
   display: flex;
@@ -16,7 +17,7 @@ header {
   margin: auto;
 }
 section {
-  height: 100vh;
+  height: 83vh;
   line-height: 20px;
 }
 .container {

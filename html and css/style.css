@@ -44,6 +44,9 @@ header {
   z-index: 4;
   width: 100%;
 }
+#close{
+  display: none;
+}
 nav {
   color: #5928e5;
   display: flex;
@@ -473,6 +476,9 @@ iframe {
   .triangle {
     height: 130px;
     bottom: 86%;
+  }
+  #close{
+    display: inline;
   }
   .triangle2 {
     height: 130px;
