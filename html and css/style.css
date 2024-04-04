@@ -99,7 +99,6 @@ nav {
   width: 400px;
   margin-top: 5%;
   background-position: center;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -110,7 +109,6 @@ nav {
   background-image: url(/images/long.png);
   height: 700px;
   width: 400px;
-  transition: all 0.2s ease-in;
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
@@ -144,7 +142,7 @@ nav {
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
-    transform: scale(1.1);
+    transform: scale(1.01);
   }
 }
 .image-6 {
@@ -234,7 +232,7 @@ nav {
   &:hover {
     box-shadow: 0px 0px 30px 5px rgba(99, 98, 98, 0.5);
     filter: none;
-    transform: scale(1.04);
+    transform: scale(1.01);
   }
 }
 #up-text {
